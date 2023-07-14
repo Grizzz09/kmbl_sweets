@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #F8F3EC, #FACC5F, #B28264, #34312F);
+    font-family: 'Gloria Hallelujah', cursive;
+    color:#20e3a2;
+  	min-height: 100vh;
+    user-select: none;
+    overflow: hidden;
+}
+
+bubles {
+  border-radius:100%;
+  position: absolute;
+  pointer-events: none;
+  background: #20e3a2;
+  opacity: 0.5;
+  box-shadow:  10px 10px 30px #31c8a2, 
+             -10px -10px 30px #31c8a2;
+  transform: translate(-50%, -50%);
+  animation: colorgen 3s infinite;
+}
+
+@keyframes colorgen {
+  0% {
+    opacity: 0.2;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #804b07, 0 0 30px #804b07, 0 0 40px #804b07, 0 0 50px #804b07, 0 0 60px #804b07;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #eeca7b, 0 0 50px #eeca7b, 0 0 60px #eeca7b, 0 0 70px #eeca7b, 0 0 80px #eeca7b;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+::selection{
+  background: rgba(26,188,156,0.3);
+}
+.container{
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+.wrapper{
+  width: 100%;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 8px 8px 15px 3px rgb(94, 80, 2);
+}
+.wrapper .title{
+  height: 90px;
+  background: #e6b800;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid rgb(211, 211, 211);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #b38f00;
+  box-shadow: inset 0px 0px 2px 2px #b38f00;
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #711ad4;
+  font-size: 18px;
+  background: #e6b800;
+  border: 1px solid #b38f00;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #b38f00;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #b38f00;
+  border: 1px solid #b38f00;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #e6b800;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #b38f00;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+.icons{
+  height: 40px;
+  width:  40px;
+}
+
+.glow {
+  font-size: 40px;
+  font-family: 'Brush Script MT';
+  color: #ad5807;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
